@@ -1,0 +1,23 @@
+1). What is the size of each C-style character string that stores a name for the account? Why?
+The length is MAX_NAME_LENGTH+1, which is 41, because we need to consider the null terminator for the character strings.
+
+2). Using examples from your own code explain which features of object orientation you used.
+Encapsulation - setting the properties and behaviour to the class CRA_Account (all the variables and functions in the class).
+Polymorphism - overloading the function set(), which performs different actions depending on a number of parameters
+provided to it. 
+
+3). Your class declares two member functions named set(...).  In C, this would generate an error.  
+Explain why this is allowed in C++.
+It is allowed in C++, because it's a part of OOP. It is called overloading and it is needed to avoid rewriting the code 
+(we can use same name of the function, but provide different parameters to them for distinguishing), it saves memory,
+it allows to manipulate object when creating (e.g. overloading constructor function).
+
+4). How do you ensure that the balance/refund displays to 2 decimal places?
+By using this: cout.precision(2);
+It changes from standard precision (of 6 digits after the point) to 2. 
+
+5). What do you need to check before storing data for a tax year?
+Check if sin is valid and if the array storing years isn't full.
+
+6). What have you learned during this workshop?
+encapsulation, function overloading, output formatting, how does SIN Validation system works.

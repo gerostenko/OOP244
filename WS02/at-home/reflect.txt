@@ -1,0 +1,37 @@
+1). What happens to dynamic memory if it is not deallocated?
+If dynamic memory wasn't deallocated, it can't be reclaimed by the operating system for further usage.
+
+2). Why do you need to allocate new dynamic memory when you increase the size of an existing array of dynamically 
+allocated memory?
+The size of already existing array was instantiated with some particular size, which means that it points to a specified
+amount of memory stored contiguously, therefore the memory resizing becomes impossible, since it is not known whether the
+contiguous memory is allocated or not. This is why resizing happens by allocating new dynamic memory with the needed size.
+
+3). The Kingdom structure stores the name in an array of characters. At the end of the program, we do not use the 
+delete operator to deallocate the memory occupied by the name. Do we have a memory leak there? Explain.
+Since the Kingdoms' names stored in an array of characters shouldn't be deallocated, because in case we deallocate the
+object of the stuct, which containts the name and the population of the Kingdom. 
+
+
+4). In your program, there are two display(...) functions. How does the compiler know which one should be called 
+from your main? Explain.
+By the amount of parameters provided to the function during the function call, since the difference between these two
+display() functions is in number of parameters used. 
+
+5). Explain what have you learned in this workshop.
+I've learnt in this workshop how to allocate/deallocate dynamic memory and overload the functions.
+
+
+Quiz 2 Reflection:
+1. What are two main categories of fundamental types?
+Incorrect answer: basic and compound. 
+Correct answer: Integral and floating point types. 
+2. If there is an integer called "X", write the code to create a reference to this integer (X) called R;
+No answer was provided during the test.
+Correct answer: int& R = X;
+3. Having a type called "Employee", write the code to dynamically create an instance of an Employee.
+No answer was provided during the test.
+Correct answer: Employee* Instance = nullptr; Instance = new Employee;
+4. Delete the dynamic employee created in question 6.
+No answer was provided during the test.
+Correct answer: delete Instance; Instance = nullptr;

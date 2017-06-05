@@ -1,0 +1,13 @@
+The steps to create a simple console application in Visual Studio:
+ - Run the Visual Studio;
+ - Press Shift+Ctrl+N (create a new project);
+ - Choose C++ -> Win 32;
+ - Choose project's name and directory;
+ - Uncheck "Create directory for solution";
+ - Next;
+ - Uncheck "Precompiled header" and "SDL checks";
+ - Check the "Empty project" and press "Finish";
+ - Press Shift+Ctrl+A (add an item);
+ - name it with .cpp extension and click "OK".
+ - Done! Let the coding fun begins!
+

@@ -1,0 +1,46 @@
+1.What is a namespace? Explain its purpose.
+A namespace is a scope for the entities that it encloses. It is needed for avoiding the identifier conflicts
+across different namespaces.
+
+2.Why are header files needed? Explain.
+Header files are needed to separate the implementation from the interface, because the header file contains the 
+prototypes of the implementation functions (or whatever is in the implementation file), and the implementation file 
+contains the function's code, which defines how the function works.
+
+3.In the instructions above, you were directed to compile only .cpp files but not the .h files. 
+Explain why you should never compile header files.
+Since header files contains only declaration for interfaces between the source files of a program (.cpp), AND the .h
+file is included as a reference in a .cpp file, it is enough to compile only the .cpp file.
+
+4.Explain why you should never include .cpp files in another file.
+Because .cpp files contain the implementation of the program/function, there is no need to include it in another file,
+it is enough to include only the .h file, which refers to the implementation file in question.
+
+5.Is there any benefit to put the source code of a program in modules or should we put everything in a single file? 
+Explain.
+It makes sense to divide the code into modules, because the code gets much more readable; each module performs some 
+particular task/function and hides its implementation.
+
+6.Explain what have you learned on this workshop.
+On this workshop I have learnt how to divide the program into logical modules, how to arrange the modules into header and
+implementation files, how to use a safeguard for the .h files which are used throughout the program multiple times, and 
+how to create and used namespaces.
+
+Quiz 1 Reflection:
+1. What is a namespace?
+Incorrect answer: Namespace is a scope for vars.
+Correct answer: A namespace is a scope for the entities that it encloses. It is needed for avoiding the identifier 
+conflicts across different namespaces.
+2. How do you include stdio.h in C++?
+Incorrect answer: #include <iostream>
+Correct answer: 
+C++-Procedural language: #include <cstdio>
+C++ - hybrid code: #include <iostream>
+3. What is abstraction?
+Incorrect version: Abstraction is hiding functions' implementation and exposing only its interface.
+Correct version: Abstraction is the process of instantiating a class, exposing its important features, identify them
+publicly and hiding the less important features within the class itself.
+4.What is encapsulation?
+Incorrect answer: Encapsulation is a process of instantiating an object of the class, which will be a part of the class.
+Correct answer: Encapsulation is the process of inputting the methods and properties together.
+
