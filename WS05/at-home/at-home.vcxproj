@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A984A7B1-5339-4F40-BAD3-0BE707F21B52}</ProjectGuid>
+    <ProjectGuid>{E04F0A5C-601C-4B3D-B321-836F7BEF9773}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>athome</RootNamespace>
+    <RootNamespace>at_home</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,6 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fraction.cpp" />
+    <ClCompile Include="w5_at_home.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fraction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

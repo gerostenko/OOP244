@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{97C0984A-4553-4898-9ABF-0FD7039E8C6C}</ProjectGuid>
+    <ProjectGuid>{2EA51033-2183-4D06-B381-7660CA8E6A15}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>inlab</RootNamespace>
+    <RootNamespace>in_lab</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,6 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fraction.cpp" />
+    <ClCompile Include="w5_in_lab.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Fraction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
