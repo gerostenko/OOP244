@@ -1,0 +1,16 @@
+1.Discuss why the operator+= should return a reference to Fraction.
+It should return the reference, because in case of += operator we assign the new value to the current (already created)
+object, therefore we need to create an alias to the object. This is why reference is used here. 
+
+2.List your uses of the pointer to the current object to simplify your code.
+I used pointer to the current object when overload operator!= and operator+=. 
+
+3.Identify the temporary objects in the tester module.
+Line 53, 57, 61 of w5_at_home.cpp
+
+4.Identify simplifications that you could make to your class without affecting the interface to the client code.
+This I don't know. 
+
+5.Explain what you have learned in this workshop.
+I have learnt how to overload operators; in which cases I need to return by reference/by value; how to overload 
+constructors;

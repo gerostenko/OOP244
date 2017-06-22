@@ -89,6 +89,8 @@ int main() {
     // TODO: deallocate the dynamic memory here
     delete[] pKingdom;
     pKingdom = nullptr;
+    delete[] newKingdom;
+    newKingdom = nullptr;
     return 0;
 }
 

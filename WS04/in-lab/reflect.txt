@@ -1,0 +1,55 @@
+1. What is meant by a safe empty state? What other safe empty states could you choose for the Passenger type? 
+Explain why.
+Safe empty state means the default state, which has to be set to the values, if user's input was invalid. 
+I used 0, however for the workshop we could use any random character, except for the alpharbet characters for char arrays
+and for int numbers, I still believe that 0 is the best suitable value, but it could be any value, which would be outside
+of the specified range for years, months and days values. We need to use these values (which indicate an empty state) to
+distinguish the actually inserted by user value from an empty state value (which, again, indicates that somethings went
+wrong and the values were assigned to an empty state).
+
+2. Describe how you would modify the code to minimize duplication using the syntax that you have covered in the course 
+to date.
+Compare the objects function could overload the "==" operator to compare the objects.
+As well, I could overload some other functions, but I didn't. Sorry. Will do next time. If in mood. 
+
+3. Explain the principal benefit of minimizing code duplication.
+Efficiency. Less duplication == shorter code == easier maintenance. 
+
+4. Explain why the canTravelWith(...) member function can access the private data variables of the referenced object.
+canTravelWith(...) is a member of the created class. The referenced in this function object is an instance of the same
+class. Which means that, based on per class privacy rule of C++, the member function of the class have access to the
+private data members of each instance of the same class (which are objects).
+
+5. Describe how you would improve your code to allow for changes in the sizes of the arrays holding the name and 
+destination data.
+Dynamic memory allocation will help here.
+
+6. What do you need to correct when you use the strncpy(...) function?
+I added a null terminator after using  strncpy(...).
+
+7. Explain what you have learned in this workshop.
+I've learnt to not trust VS and to empty my char arrays. As well, I've learnt how to use strcmp, cause I haven't used it
+before; how to overload constructors and set empty state for thevalidation purposes. Still learning to comment everything
+I code. And I've learnt to not forget to input "const" to query functions, which don't modify data. 
+
+Quiz 4 Reflection
+1. Incorrect version:
+Container Container::operand++(int)
+{
+Container temp = *this;
+if (m_volume < m_capacity)
+{
+++(*this);			//this part was incorrect
+}
+return temp;
+}
+Correct version:
+Container Container::operator++(int) {
+   Container temp = *this;
+   if (m_volume < m_capacity) {
+      m_volume += 1;		//now I know that this is how it should be... :( My bad... 
+   }
+   return temp;
+}
+
+the rest was correct, except for the 3rd question, which, as Cesar advised, was dismissed. 
