@@ -1,7 +1,7 @@
 // OOP244 Workshop 6: class with resources
-// File: w6_in_lab.cpp
+// File: w6_at_home.cpp
 // Version: 1.0
-// Date: 2017/20/06
+// Date: 2017/28/06
 // Author: Galina Erostenko
 // Description:
 // This file tests in-lab section of your workshop
@@ -28,10 +28,7 @@ namespace sict {
     {
         int validNumsSize = 0, j = 0;
         if (name != nullptr && name[0] != '\0') {
-            m_name[0] = '\0';
-            strncpy(m_name, name, SIZE);
-            m_name[SIZE - 1] = '\0';
-
+            copyName(name);
             if (size > 0) {
                 for (int i = 0; i < size; i++)
                 {
@@ -61,6 +58,16 @@ namespace sict {
             setEmptyState();
         }
     }
+    Contact::Contact(const Contact& obj)
+    {
+        copyName(obj.m_name);
+
+        m_phone = new long long[m_size = obj.m_size];
+        for (int i = 0; i < m_size; i++)
+        {
+            m_phone[i] = obj.m_phone[i];
+        }
+    } 
     bool Contact::isValid(const long long* phone) const
     {
         bool result = false;
@@ -104,5 +111,45 @@ namespace sict {
                 cout << (int)(phoneNum(&m_phone[i]) / 10000) << "-" << phoneNum(&m_phone[i]) % 10000 << endl;
             }
         }
+    }
+    Contact& Contact::operator=(const Contact& obj)
+    {
+        if (this != &obj)
+        {
+            copyName(obj.m_name);
+            delete[] m_phone;
+            m_phone = new long long[m_size = obj.m_size];
+            for (int i = 0; i < m_size; i++)
+            {
+                m_phone[i] = obj.m_phone[i];
+            }
+        }
+        return *this;
+    }
+    Contact& Contact::operator+=(long long newPhone)
+    {
+        if (isValid(&newPhone))
+        {
+                long long* temp = new long long[m_size + 1];
+                int i;
+                for (i = 0; i < m_size; i++)
+                {
+                    temp[i] = m_phone[i];
+                }
+                m_size += 1;
+                temp[i] = newPhone;
+                delete[] m_phone;
+                m_phone = temp;
+            
+        }
+        return *this;
+    }
+    char* Contact::copyName(const char* right)
+    {
+        m_name[0] = '\0';
+        strncpy(m_name, right, strlen(right));
+        m_name[strlen(right)] = '\0';
+        
+        return m_name;
     }
 }
