@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{A984A7B1-5339-4F40-BAD3-0BE707F21B52}</ProjectGuid>
+    <ProjectGuid>{362178AD-6931-43FD-8F82-88814862B015}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>athome</RootNamespace>
+    <RootNamespace>in_lab</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,15 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
-    <ClCompile Include="CheckingAccount.cpp" />
-    <ClCompile Include="SavingsAccount.cpp" />
-    <ClCompile Include="w8_at_home.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="w7_in_lab.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h" />
-    <ClInclude Include="CheckingAccount.h" />
-    <ClInclude Include="SavingsAccount.h" />
+    <ClInclude Include="Hero.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

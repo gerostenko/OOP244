@@ -1,0 +1,27 @@
+1. Why did we choose m_health to be a signed integer? (Hint: what happens if the Hero has a health of 1, and someone does 2 points of damage to them.)
+Because m_health should not be negative. 0 is dead, it's impossible to be even more dead than that.
+
+2. Does the Hero class need to know about the existence of the class SuperHero? (Hint: do a search in Hero.cpp, does the word “SuperHero” appear anywhere in it?) 
+How about the reverse, does SuperHero know about the Hero class?
+Hero doesn't need to know about SuperHero, but SuperHero must know about Hero, because this class uses the getters and setters of the base class (Hero).
+
+3. The program prints out “AncientBattle!” when 2 Heros fight. It prints out “SuperFight!” when 2 SuperHeros fight. When you tried to make a Hero fight a SuperHero, 
+what did it print out?
+"Best Greeks Hero vs Best Comic Book SuperHero", I guess.
+
+4. True or False: are the following a valid program definition for main? 
+First one is true, second one is false.
+
+int main()
+{
+  Hero ("Achilles",  20, 6) * Hero  ("Hector",    30, 5);
+}
+
+how about this?
+
+int main()
+{
+  ( Hero ("Achilles",  20, 6) * Hero ("Hector",    30, 5) ) 
+                              *
+  ( Hero ("Atalanta",  10, 3) * Hero ("Hippolyta", 10, 2) );
+}

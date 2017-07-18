@@ -15,27 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp">
+    <ClCompile Include="Hero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CheckingAccount.cpp">
+    <ClCompile Include="SuperHero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SavingsAccount.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="w8_at_home.cpp">
+    <ClCompile Include="w7_at_home.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h">
+    <ClInclude Include="Hero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CheckingAccount.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SavingsAccount.h">
+    <ClInclude Include="SuperHero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
