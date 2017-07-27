@@ -1,0 +1,16 @@
+1.	A string can have a capacity of N, but have a length less than that. You have used such strings in the past, e.g. char myString[100] = “hello world”; 
+has a size of 100 but a length of 11. Is your class coded to allocate exactly L + 1 bytes of storage for any string, where L = string length and 1 is the storage for 
+the 0 character? Can your class still work if you decided to be generous and give all your strings more capacity than they need? 
+My class is coded to compare the capacity of the string and string length, so that the memory which I dynamically allocate is used smart. It will work with greater
+capacity as well. 
+
+2.	Given how hard you found it to debug your string library, is it a good idea to always make your own libraries, or to use the standard one used by everybody 
+that are tested and true? 
+The latter one makes more sense to me.
+
+3.	When you use your sict::String class in the main function, do you have to set them to the safe empty state? Do you have to clean up after them at the end of 
+the function? Can you add 2 strings together without worrying about whether data is lost or not? How would this have made some of your previous labs easier, if you 
+could use sict::String instead of regular char arrays?
+Empty state is set in a constructor. Destructor cleans up the garbage. Yes, I can add two strings together, because my code is built in such a way that no data
+will be lost during the merge. I think that working with strings is much easier and efficient than with char arrays, so if in some of the labs we could substitute 
+them for strings, it would be nicer and smoother. 
